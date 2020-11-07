@@ -1,0 +1,39 @@
+# Copyright (c) 2020 Stephen Mendez. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at http://mozilla.org/MPL/2.0/.
+
+appId: com.wanamibrowser.app
+productName: Wanami Browser
+copyright: Copyright © 2020 Stephen Mendez
+directories:
+  output: dist
+  buildResources: resources
+files:
+  - from: .
+    filter:
+      - package.json
+      - app
+extraResources:
+  - from: "resources"
+    filter:
+      - "**/*"
+# Mac OS configuration
+mac:
+  icon: "resources/icons/mac/icon.icns"
+  category: public.app-category.productivity
+  darkModeSupport: false
+  target:
+    - {target: dmg}
+dmg:
+  icon: "resources/icons/mac/icon.icns"
+  iconSize: 128
+  contents:
+    - x: 130
+      y: 220
+      type: file
+    - x: 410
+      y: 220
+      type: "link"
+      path: "/Applications"
+publish: null

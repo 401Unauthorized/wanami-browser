@@ -1,0 +1,21 @@
+/* Copyright (c) 2020 Stephen Mendez. All rights reserved.
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+.laser {
+  width: 101vw;
+  background-color: tomato;
+  height: 2px;
+  position: absolute;
+  top: 54px;
+  z-index: 2;
+  box-shadow: 0 0 8px red;
+  animation: scanning 3s infinite;
+}
+
+@keyframes scanning {
+  50% {
+    transform: translateY(90vh);
+  }
+}
