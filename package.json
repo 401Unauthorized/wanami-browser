@@ -1,0 +1,73 @@
+{
+  "name": "wanami-browser",
+  "productName": "Wanami Browser",
+  "description": "A simple, cybersecurity focused web browser.",
+  "version": "1.0.0",
+  "keywords": [
+    "wanami",
+    "wahoo",
+    "namaste",
+    "web",
+    "browser",
+    "cybersecurity",
+    "phishing",
+    "electron",
+    "react"
+  ],
+  "author": "Stephen Mendez <git@stephenmendez.dev> (https://www.stephenmendez.dev)",
+  "bugs": "https://github.com/401unauthorized/wanami-browser/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/401unauthorized/wanami-browser.git",
+    "owner": "401Unauthorized"
+  },
+  "license": "MPL-2.0",
+  "main": "app/background.js",
+  "scripts": {
+    "dev": "nextron",
+    "build": "nextron build",
+    "postinstall": "electron-builder install-app-deps",
+    "package-mac": "electron-packager ./main --overwrite --platform=darwin --arch=x64 --icon=resources/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager ./main --overwrite --platform=win32 --arch=ia32 --icon=resources/icons/win/icon.ico --prune=false --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Wanami Browser\"",
+    "package-linux": "electron-packager ./main --overwrite --platform=linux --arch=x64 --icon=resources/icons/linux/icon.png --prune=false --out=release-builds"
+  },
+  "dependencies": {
+    "argon2": "^0.27.0",
+    "axios": "^0.21.0",
+    "copy-to-clipboard": "^3.3.1",
+    "dotenv": "^8.2.0",
+    "electron-about-window": "^1.13.4",
+    "electron-log": "^4.3.0",
+    "electron-serve": "^1.0.0",
+    "electron-store": "^6.0.1",
+    "framer-motion": "^2.9.4",
+    "github-version-checker": "^2.2.0",
+    "joi": "^17.3.0",
+    "jpeg-js": "^0.4.2",
+    "jsqr": "^1.3.1",
+    "keytar": "^7.0.0",
+    "memoizee": "^0.4.14",
+    "moment": "^2.29.1",
+    "normalize-url": "^5.3.0",
+    "otpauth": "^6.1.0",
+    "psl": "^1.8.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "babel-loader": "^8.1.0",
+    "electron": "^10.1.5",
+    "electron-builder": "^22.9.1",
+    "electron-packager": "^15.1.0",
+    "next": "^10.0.2",
+    "nextron": "^5.15.11",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "webpack": "^4.44.2"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://paypal.me/stephenmendez401"
+  }
+}
